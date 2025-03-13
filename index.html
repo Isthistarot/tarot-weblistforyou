@@ -1,220 +1,43 @@
 <!DOCTYPE html>
 <html lang="ro">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Isthi Tarot - Servicii Esoterice & Spiritualitate</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');
-
-        body {
-            font-family: 'Marcellus', serif;
-            background-color: #1a1a1a;
-            color: #d4af37;
-            margin: 0;
-            padding: 0;
-        }
-
-        header {
-            background: url('https://source.unsplash.com/1600x600/?tarot,magic') no-repeat center;
-            background-size: cover;
-            text-align: center;
-            padding: 80px 20px;
-            color: white;
-            text-shadow: 2px 2px 5px black;
-        }
-
-        header h1 {
-            font-size: 42px;
-            margin: 0;
-        }
-
-        header p {
-            font-size: 20px;
-        }
-
-        .language-switch {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-        }
-
-        .language-switch button {
-            background: #7b4397;
-            color: white;
-            border: none;
-            padding: 8px 15px;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-
-        .language-switch button:hover {
-            background: #dc2430;
-        }
-
-        section {
-            text-align: center;
-            padding: 30px 20px;
-        }
-
-        .services-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-        }
-
-        .service-item {
-            background: rgba(0, 0, 0, 0.7);
-            padding: 20px;
-            border-radius: 10px;
-            width: 300px;
-            box-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
-            transition: transform 0.3s ease;
-        }
-
-        .service-item:hover {
-            transform: scale(1.05);
-        }
-
-        .service-item h3 {
-            color: #d4af37;
-        }
-
-        .price {
-            color: #e67e22;
-            font-weight: bold;
-        }
-
-        .contact-button {
-            display: inline-block;
-            background: linear-gradient(45deg, #7b4397, #dc2430);
-            color: white;
-            padding: 12px 20px;
-            border-radius: 30px;
-            text-decoration: none;
-            font-size: 18px;
-            margin-top: 20px;
-            transition: 0.3s;
-        }
-
-        .contact-button:hover {
-            background: linear-gradient(45deg, #dc2430, #7b4397);
-            transform: scale(1.1);
-        }
-
-        .pagination {
-            margin-top: 20px;
-            text-align: center;
-        }
-
-        .pagination button {
-            background: #d4af37;
-            border: none;
-            padding: 10px 15px;
-            margin: 5px;
-            cursor: pointer;
-            border-radius: 5px;
-            transition: 0.3s;
-        }
-
-        .pagination button:hover {
-            background: #e67e22;
-        }
-
-        footer {
-            background-color: #000;
-            text-align: center;
-            padding: 10px;
-            width: 100%;
-            color: white;
-        }
-    </style>
+    <title>Isthi Tarot - Servicii Esoterice și Spiritualitate</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
 
     <header>
-        <h1>Isthi Tarot 🔮</h1>
-        <p id="tagline">Magie. Claritate. Transformare.</p>
-        <div class="language-switch">
-            <button onclick="switchLanguage()">🌍 RO / EN</button>
-        </div>
+        <h1 id="title">Isthi Tarot - Servicii Esoterice și Spiritualitate</h1>
+        <p id="subtitle">Descoperă magia tarotului și ghidarea spirituală personalizată!</p>
+        <button id="language-toggle">🇬🇧 English</button>
     </header>
 
     <section>
-        <h2 id="services-title">✨ Servicii oferite ✨</h2>
-        <div class="services-container" id="services-container">
-            <!-- Serviciile vor fi generate dinamic -->
-        </div>
-
+        <h2 id="services-title">Servicii oferite</h2>
+        <ul id="services-list"></ul>
+        
         <div class="pagination">
-            <button onclick="prevPage()">⬅️ Înapoi</button>
-            <span id="page-number">1</span>
-            <button onclick="nextPage()">Înainte ➡️</button>
+            <button id="prev-page">⬅️ Înapoi</button>
+            <span id="page-number">Pagina 1</span>
+            <button id="next-page">Înainte ➡️</button>
         </div>
     </section>
 
+    <section class="payment-info">
+        <h3 id="payment-title">Metode de Plată</h3>
+        <p id="payment-details">Plățile se pot face prin <b>Revolut</b> sau <b>Transfer bancar</b>. Detaliile vor fi furnizate prin mesaj privat după alegerea unui serviciu.</p>
+    </section>
+
     <section>
-        <a href="https://www.instagram.com/isthistarot/" class="contact-button" target="_blank">📩 Contact pe Instagram</a>
+        <a href="https://www.instagram.com/isthistarot/" class="contact-button" target="_blank" id="contact-button">Contactează-mă pe Instagram</a>
     </section>
 
     <footer>
         <p>&copy; 2025 Isthi Tarot - Toate drepturile rezervate</p>
     </footer>
 
-    <script>
-        const services = [
-            { title: "🔮 Citire Tarot (30 min)", price: "150 RON | 33 EUR" },
-            { title: "🌌 Matrix Chart", price: "200 RON | 44 EUR" },
-            { title: "🔢 Numerologie", price: "88 RON | 55 EUR" },
-            { title: "✨ Citire Generală", price: "60 RON | 13 EUR" },
-            { title: "💫 Citire 3 Întrebări", price: "33 RON | 11 EUR" },
-            { title: "🌓 Analiză Astrală", price: "111 RON | 22 EUR" },
-            { title: "🌟 Ghidare Spirituală", price: "444 RON | 111 EUR" },
-            { title: "🌀 Vindecarea Chakrelor", price: "67 RON | 25 EUR" },
-            { title: "🌠 Mesaje de la Univers", price: "44 RON | 14 EUR" },
-            { title: "🌍 Spiritual Journey", price: "444 RON | 111 EUR" },
-            { title: "💞 Matrix Chart Cuplu", price: "255 RON | 66 EUR" },
-            { title: "📖 Carte PDF Tarot", price: "99 RON | 33 EUR" }
-        ];
-
-        let currentPage = 1;
-        const servicesPerPage = 4;
-
-        function renderServices() {
-            const container = document.getElementById("services-container");
-            container.innerHTML = "";
-            const start = (currentPage - 1) * servicesPerPage;
-            const end = start + servicesPerPage;
-            services.slice(start, end).forEach(service => {
-                const div = document.createElement("div");
-                div.classList.add("service-item");
-                div.innerHTML = <h3>${service.title}</h3><p class="price">${service.price}</p>;
-                container.appendChild(div);
-            });
-            document.getElementById("page-number").innerText = currentPage;
-        }
-
-        function nextPage() {
-            if (currentPage * servicesPerPage < services.length) {
-                currentPage++;
-                renderServices();
-            }
-        }
-
-        function prevPage() {
-            if (currentPage > 1) {
-                currentPage--;
-                renderServices();
-            }
-        }
-
-        renderServices();
-    </script>
-
+    <script src="script.js"></script>
 </body>
-
 </html>
