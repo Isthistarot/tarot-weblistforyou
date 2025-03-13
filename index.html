@@ -4,83 +4,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Isthi Tarot - Magie & Spiritualitate</title>
+    <title>Isthi Tarot - Servicii Esoterice și Spiritualitate</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');
-
         body {
-            font-family: 'Marcellus', serif;
-            background-color: #1a1a1a;
-            color: #d4af37;
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
             margin: 0;
             padding: 0;
         }
 
         header {
-            background: url('https://source.unsplash.com/1600x900/?tarot,magic') no-repeat center;
-            background-size: cover;
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
             text-align: center;
-            padding: 60px 20px;
-            color: white;
-            text-shadow: 2px 2px 5px black;
         }
 
         header h1 {
-            font-size: 48px;
-            margin: 0;
-        }
-
-        header p {
-            font-size: 20px;
-        }
-
-        .language-switch {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-        }
-
-        .language-switch button {
-            background: #7b4397;
-            color: white;
-            border: none;
-            padding: 8px 15px;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-
-        .language-switch button:hover {
-            background: #dc2430;
+            font-size: 36px;
         }
 
         section {
-            text-align: center;
-            padding: 30px 20px;
+            padding: 20px;
+            margin: 20px;
         }
 
-        .services-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
+        h2 {
+            color: #333;
+        }
+
+        .services-list {
+            list-style: none;
+            padding: 0;
         }
 
         .service-item {
-            background: rgba(0, 0, 0, 0.7);
-            padding: 20px;
-            border-radius: 10px;
-            width: 300px;
-            box-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
-            transition: transform 0.3s ease;
-        }
-
-        .service-item:hover {
-            transform: scale(1.05);
-        }
-
-        .service-item h3 {
-            color: #d4af37;
+            background-color: #fff;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
         .price {
@@ -90,29 +54,39 @@
 
         .contact-button {
             display: inline-block;
-            background: linear-gradient(45deg, #7b4397, #dc2430);
+            background-color: #E1306C;
             color: white;
             padding: 12px 20px;
             border-radius: 30px;
             text-decoration: none;
             font-size: 18px;
             margin-top: 20px;
-            transition: 0.3s;
         }
 
         .contact-button:hover {
-            background: linear-gradient(45deg, #dc2430, #7b4397);
-            transform: scale(1.1);
+            background-color: #bc135c;
         }
 
         footer {
-            background-color: #000;
+            background-color: #333;
+            color: #fff;
             text-align: center;
             padding: 10px;
             position: fixed;
             bottom: 0;
             width: 100%;
-            color: white;
+        }
+
+        .payment-info {
+            background-color: #fff;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .payment-info h3 {
+            color: #e67e22;
         }
     </style>
 </head>
@@ -120,33 +94,89 @@
 <body>
 
     <header>
-        <h1>Isthi Tarot 🔮</h1>
-        <p id="tagline">Magie. Claritate. Transformare.</p>
-        <div class="language-switch">
-            <button onclick="switchLanguage()">🌍 RO / EN</button>
-        </div>
+        <h1>Isthi Tarot - Servicii Esoterice și Spiritualitate</h1>
+        <p>Descoperă magia tarotului și ghidarea spirituală personalizată!</p>
     </header>
 
     <section>
-        <h2 id="services-title">✨ Servicii oferite ✨</h2>
-        <div class="services-container">
-            <div class="service-item">
-                <h3 id="service1-title">🔮 Citire Tarot (30 min)</h3>
-                <p id="service1-desc">Răspunsuri pentru viața ta.</p>
+        <h2>Servicii oferite</h2>
+        <ul class="services-list">
+            <li class="service-item">
+                <h3>Citire Tarot (30 minute)</h3>
+                <p>Oferă răspunsuri la întrebările tale din viața personală, profesională sau spirituală.</p>
                 <p class="price">150 RON | 33 EUR</p>
-            </div>
-            <div class="service-item">
-                <h3 id="service2-title">🌌 Matrix Chart</h3>
-                <p id="service2-desc">Analiză astrologică completă.</p>
+            </li>
+            <li class="service-item">
+                <h3>Matrix Chart / Analiză Astrologică (3 întrebări + citire generală)</h3>
+                <p>Descoperă aspectele profunde ale hărții tale astrologice și cum influențează acestea viața ta.</p>
                 <p class="price">200 RON | 44 EUR</p>
-            </div>
-        </div>
+            </li>
+            <li class="service-item">
+                <h3>Citire Generală</h3>
+                <p>O citire generală care îți adresează întrebările curente, oferindu-ți claritate și înțelegere.</p>
+                <p class="price">60 RON | 13 EUR</p>
+            </li>
+            <li class="service-item">
+                <h3>Citire Tarot (3 întrebări)</h3>
+                <p>Oferă răspunsuri precise și clare pentru cele mai importante trei întrebări ale tale.</p>
+                <p class="price">33 RON | 11 EUR</p>
+            </li>
+            <li class="service-item">
+                <h3>Numerologie</h3>
+                <p>Oferă o analiză detaliată a numerelor tale și cum te influențează în viața de zi cu zi.</p>
+                <p class="price">88 RON | 55 EUR</p>
+            </li>
+            <li class="service-item">
+                <h3>Analiză Astrală</h3>
+                <p>Oferă o analiză detaliată a astrelor și cum acestea interacționează cu personalitatea ta și cu viața ta.</p>
+                <p class="price">111 RON | 22 EUR</p>
+            </li>
+            <li class="service-item">
+                <h3>Tarot - Ghidare Spirituală</h3>
+                <p>O citire profundă care explorează călătoria ta spirituală și ce trebuie să faci pentru a evolua.</p>
+                <p class="price">444 RON | 111 EUR</p>
+            </li>
+            <li class="service-item">
+                <h3>Cum să îți Vindeci Chakrele</h3>
+                <p>O sesiune de ghidare în vindecarea chakrelor și restabilirea echilibrului energetic.</p>
+                <p class="price">67 RON | 25 EUR</p>
+            </li>
+            <li class="service-item">
+                <h3>Mesaje de la Univers</h3>
+                <p>Primește mesaje direct din univers pentru a te ghida în călătoria ta personală.</p>
+                <p class="price">44 RON | 14 EUR</p>
+            </li>
+            <li class="service-item">
+                <h3>Spiritual Journey cu Mine</h3>
+                <p>O călătorie spirituală personalizată, care te va ghida în descoperirea de sine și a scopului tău.</p>
+                <p class="price">444 RON | 111 EUR</p>
+            </li>
+            <li class="service-item">
+                <h3>Matrix Chart cuplu</h3>
+                <p>O analiză completă a relației voastre, bazată pe astrologie, care explorează dinamica și compatibilitatea.</p>
+                <p class="price">255 RON | 66 EUR</p>
+            </li>
+            <li class="service-item">
+                <h3>Carte PDF - Semnificații Tarot</h3>
+                <p>Un ghid complet cu semnificațiile tarotului pentru a înțelege mai bine citirile tale.</p>
+                <p class="price">99 RON | 33 EUR</p>
+            </li>
+        </ul>
+    </section>
+
+    <section class="payment-info">
+        <h3>Metode de Plată</h3>
+        <p>Plățile se pot face prin *Revolut* sau *Transfer bancar*. Detaliile vor fi furnizate prin mesaj privat după alegerea unui serviciu.</p>
     </section>
 
     <section>
-        <a href="https://www.instagram.com/isthistarot/" class="contact-button" target="_blank">📩 Contact pe Instagram</a>
+        <a href="https://www.instagram.com/isthistarot/" class="contact-button" target="_blank">Contactează-mă pe Instagram</a>
     </section>
 
     <footer>
         <p>&copy; 2025 Isthi Tarot - Toate drepturile rezervate</p>
-    </
+    </footer>
+
+</body>
+
+</html>
