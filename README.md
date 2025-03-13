@@ -1,29 +1,28 @@
-# Isthi Tarot - Servicii Esoterice și Spiritualitate ✨
+# 🔮 Isthi Tarot - Magie & Spiritualitate
 
-Acesta este un site esoteric dedicat citirii în tarot, astrologiei și numerologiei. Proiectul este găzduit pe GitHub Pages și poate fi accesat aici:
+![Isthi Tarot](https://source.unsplash.com/1200x400/?tarot,magic)
 
-🔮 **[Vizitează site-ul](https://username.github.io/isthi-tarot/)**
+## ✨ Descriere
+*Isthi Tarot* este un website esoteric dedicat citirilor de tarot, ghidării spirituale și astrologiei. Creat cu *HTML, CSS și JavaScript*, site-ul oferă o interfață elegantă și unică pentru cei interesați de lumea mistică.  
 
----
+🔹 *Caracteristici*:
+- 🔮 Listă de *servicii esoterice*  
+- 🌙 *Design mistic* și animat  
+- 🔄 *Buton de schimbare a limbii* (Română / Engleză)  
+- 📩 *Legătură rapidă către Instagram* pentru contact direct  
 
-## 📂 Structura fișierelor
-- index.html - Pagina principală
-- styles.css - Fișierul de stiluri pentru design
-- script.js - Script pentru funcționalități (paginare, schimbare limbă)
-- README.md - Documentația proiectului
-
----
-
-## 📌 Funcționalități
-✔️ Pagină modernă cu servicii esoterice  
-✔️ Buton pentru schimbarea limbii (Română/Engleză)  
-✔️ Paginare pentru listarea serviciilor  
-✔️ Link direct către Instagram pentru contact  
-✔️ Găzduit gratuit pe GitHub Pages  
+🔗 *Vizitează site-ul:* [https://isthistarot.github.io/](https://isthistarot.github.io/)
 
 ---
 
-## 🚀 Cum să încarci modificări?
-1. Clonează repo-ul:  
+## 📂 Structura Proiectului
+📁 index.html – Pagina principală  
+📁 style.css – Stiluri personalizate (inclus în <style>)  
+📁 script.js – Funcționalitatea pentru schimbarea limbii  
+
+---
+
+## 🚀 Instalare & Utilizare
+1. *Clonează repository-ul:*
    ```sh
-   git clone https://github.com/username/isthi-tarot.git
+   git clone https://github.com/isthistarot/isthistarot_listinfo.git
